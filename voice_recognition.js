@@ -4,7 +4,10 @@ const pause_text=String.fromCharCode(9724),start_text=String.fromCharCode(9654),
 let voice=[],isTrusted=true,starting,voice_sec,voice_timer,stoping,reseting,lap,speech_off,info_speech
 recognizer.interimResults = false;recognizer.maxAlternatives=1
 
-recognizer.onerror=(ev)=>{console.log('Speech recognition error detected: '+ev.error)}
+recognizer.onerror=(ev)=>{
+	console.log('Speech recognition error detected: '+ev.error)
+	if(ev.error==='not-allowed'){speech_on_off_child.style.display='initial';isTrusted=false;recognizer.abort()}
+}
 
 recognizer.onresult = function (ev){let res = ev.results[0][0];
 	if(reseting.includes(res.transcript)===true||stoping.includes(res.transcript)===true){
