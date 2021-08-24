@@ -7,8 +7,8 @@ recognizer.interimResults = false;recognizer.maxAlternatives=1
 recognizer.onerror=(ev)=>{
 	console.log('Speech recognition error detected: '+ev.error)
 	if(ev.error==='not-allowed'||ev.error==='network'){
-		speech_on_off_child.style.display='initial';isTrusted=false;recognizer.abort()}
-		alert('В этом браузере управление голосом не работает, попробуйте браузеры Chrome,Yandex,Samsung')
+		speech_on_off_child.style.display='initial';isTrusted=false;recognizer.abort()
+		alert('В этом браузере управление голосом не работает, попробуйте браузеры Chrome,Yandex,Samsung')}
 }
 
 recognizer.onresult = function (ev){let res = ev.results[0][0];
