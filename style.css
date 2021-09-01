@@ -29,6 +29,7 @@ P{max-width:90%;padding:0.5rem 1rem;}
 #turtle,#drum{text-align: left}
 #rocket,#violin{text-align: right}
 .m_m_button{margin:2rem 0 0 43.15%;opacity:1}
+a {color: white;margin: auto;}
 
 .head_but{display:flex; justify-content: space-between;}
 #speech_on_off,#settings{margin-right: 0.2rem;font-size: 2rem;width: 3rem; height: 3rem; border-radius: 5%; margin-top: 0.2rem;opacity: 1;}

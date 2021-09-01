@@ -54,7 +54,7 @@ function change_value(el){if(el.id==='rate'){value_rate.textContent=el.value;loc
 }
 
 function getVoice(){voice=speechSynthesis.getVoices();
-	const v_list=voice.filter(i=>i.lang==='ru_RU'||i.lang==='ru-RU'||i.lang==='en_US'||i.lang==='en-US'||i.lang==='en_GB'||i.lang==='en-GB').map((v,i)=>`<option value=${i}>${v.name} ${v.lang}`).join('');	
+	const v_list=voice.filter(i=>i.lang==='ru_RU'||i.lang==='ru-RU'||i.lang==='en_US'||i.lang==='en-US'||i.lang==='en_GB'||i.lang==='en-GB').map((v,i)=>`<option value=${i}>${v.name} ${v.lang}`).join('');		
 	voices.innerHTML= v_list;
 	if(localStorage.getItem('voice')){voices.value=localStorage.getItem('voice')}else{setTimeout(()=>{voices.value=0},1000)}
 	recognizer.lang=voices[voices.value].textContent.slice(-5);
@@ -87,7 +87,7 @@ function get_data(val){
 		if(localStorage.getItem('reseting')){reseting=localStorage.getItem('reseting').split(',')}
 		else{reseting=['reset','Reset','Clear','clear','Drop','drop','Сбросить','сбросить','Очистить','очистить'];localStorage.setItem('reseting',reseting)}
 		if(localStorage.getItem('lap')){lap=localStorage.getItem('lap').split(',')}
-		else{lap=['Lap','lap','Round','round','Круг','круг','подход','Подход','Раунд','раунд'];localStorage.setItem('lap',lap)}
+		else{lap=['Lap','lap','Round','round','circle','Circle','lip','Lip','around','Круг','круг','подход','Подход','Раунд','раунд'];localStorage.setItem('lap',lap)}
 		if(localStorage.getItem('speech_off')){speech_off=localStorage.getItem('speech_off').split(',')}
 		else{speech_off=['выключил','Выключил','Выключить','выключить','Speech off','speech off','Switch off','switch off'];localStorage.setItem('speech_off',speech_off)}
 		if(localStorage.getItem('rate')){value_rate.textContent=localStorage.getItem('rate');rate.value=localStorage.getItem('rate')}
