@@ -1,5 +1,5 @@
 const stat_cache='app_v1'
-const stat_files=['voice_recognition.js','index.html','style.css','privacy.html','terms.html','voice_timer.js','stopwatch.js','ru.png','en.png','signal.wav','favicon.svg','manifest.json','maskable_icon.png','48.png','72.png','96.png','144.png','192.png','512.png','maskable_icon.png']
+const stat_files=['voice_recognition.js','index.html','style.css','privacy.html','terms.html','voice_timer.js','stopwatch.js','ru.png','en.png','signal.wav','favicon.svg','manifest.json','maskable_icon.png','48.png','72.png','96.png','144.png','192.png','512.png']
 
 self.addEventListener('install',ev=>{
 	console.log('inst')
