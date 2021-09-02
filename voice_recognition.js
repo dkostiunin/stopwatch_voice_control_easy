@@ -116,3 +116,7 @@ function split_text(){
 	if(w[2]!='00'){if (w[2][0]=='0'){w[2]=w[2][1]};n.push(w[2]+' секунд')};
 	return n.join(' ')
 }
+
+window.addEventListener('load',async()=>{
+    if(navigator.serviceWorker){const reg=await navigator.serviceWorker.register('sw.js')}
+})

@@ -2,11 +2,14 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 		<meta name="viewport" content="width=device-width">
-		<title>Секундомер, управляемый голосом</title>		
+		<title>Секундомер, управляемый голосом</title>
 		<link rel="stylesheet" href="style.css">
-		<link rel="icon" type="image/svg+xml" href="favicon.svg">		
+		<link rel="icon" type="image/svg+xml" href="favicon.svg">
+		<link rel="manifest" href="manifest.json">
+		<link rel="apple-touch-icon" href="192.png">
+		<meta name="theme-color" content="black"/>
+		<meta name="description" content="Stopwatch and Timer with voice control in English and Russian">
 	</head>
 	<body>	
 		<div class="head_but">
@@ -14,18 +17,18 @@
 				<button id="speech_on_off" class="buttons">&#127908</button>
 				<div id="speech_on_off_child" style="display:initial"></div>
 			</div>
-			<button id="settings" class="buttons" onclick="show_menu(this)">&#8801</button>			
+			<button id="settings" class="buttons" onclick="show_menu(this)">&#8801</button>
 		</div>
 		<div class="device_but">
 			<button id="button_timer" class="buttons" onclick="change_device(this)">&#9203</button>
-			<button id="button_sec" class="buttons" onclick="change_device(this)">&#9201</button>		
-		</div>	
+			<button id="button_sec" class="buttons" onclick="change_device(this)">&#9201</button>
+		</div>
 		
-		<div id="main_menu" style="display:none">				
+		<div id="main_menu" style="display:none">
 		<label class="m_m_child m_m_value" for="rate"><span id="turtle">&#128034</span><span id="value_rate">1</span><span id="rocket">&#128640</span></label>
 			<input class="m_m_child" onchange="change_value(this)" type="range" id="rate" value="1" min="0.2" max="3" step="0.2"/>
 			<label class="m_m_child m_m_value" for="pitch"><span id="drum">&#127928</span><span id="value_pitch">1</span><span id="violin">&#127931</span></label>
-			<input class="m_m_child" onchange="change_value(this)" type="range" id="pitch" value="1" min="0.2" max="2" step="0.2"/>			
+			<input class="m_m_child" onchange="change_value(this)" type="range" id="pitch" value="1" min="0.2" max="2" step="0.2"/>
 			<select class="m_m_child" onchange="change_value(this)" id="voices"></select>
 			<p class="m_m_child a_href"><a href="https://second.cf/privacy.html">Privacy Policy</a></p>
 			<p class="m_m_child a_href"><a href="https://second.cf/terms.html">Terms & Conditions</a></p>
@@ -33,7 +36,7 @@
 			<div id="text_info" style="display:none">
 				<div>
 					<img id="flag_ru" onclick="show_menu(this)" src="ru.png" alt="Инструкция на русском языке">
-					<img id="flag_en" onclick="show_menu(this)" src="en.png" alt="Instruction in English">									
+					<img id="flag_en" onclick="show_menu(this)" src="en.png" alt="Instruction in English">
 				</div>
 				<div id="text_ru" style="display:initial">
 					<p class="headline">Управление голосом</p>
@@ -59,12 +62,12 @@
 					<p>To memorize lap or round times - say "Lap Round Circle"</p>
 					<p>To mute the microphone - say "Speech off Switch off"</p>
 				</div>
-				</div>	
-			</div>				
-			<div id="div_rezult"><div id="rezult">00:00:00:00</div></div>			
+				</div>
+			</div>
+			<div id="div_rezult"><div id="rezult">00:00:00:00</div></div>
 				
 			<script src="voice_recognition.js"></script>
 			<script src="stopwatch.js"></script>
-			<script src="voice_timer.js"></script>			
+			<script src="voice_timer.js"></script>
 		</body>
-	</html>																																																					
+	</html>
