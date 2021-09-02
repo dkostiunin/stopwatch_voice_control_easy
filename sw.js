@@ -1,4 +1,4 @@
-const stat_cache='app_v1',stat_files=['voice_recognition.js','voice_recognition.html','style.css','/privacy.html','terms.html','voice_timer.js','stopwatch.js','ru.png','en.png','signal.wav','favicon.svg','manifest.json','maskable_icon.png']
+const stat_cache='app_v1',stat_files=['voice_recognition.js','voice_recognition.html','style.css','privacy.html','terms.html','voice_timer.js','stopwatch.js','ru.png','en.png','signal.wav','favicon.svg','manifest.json','maskable_icon.png']
 
 self.addEventListener('install',ev=>{
     ev.waitUntil(caches.open(stat_cache).then(cache=>cache.addAll(stat_files)))
