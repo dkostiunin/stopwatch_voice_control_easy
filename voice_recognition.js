@@ -118,5 +118,9 @@ function split_text(){
 }
 
 window.addEventListener('load',async()=>{
-    if(navigator.serviceWorker){const reg=await navigator.serviceWorker.register('sw.js')}
+    if(navigator.serviceWorker){
+		const reg=await navigator.serviceWorker.register('sw.js')
+		console.log('Registration successful, scope is:', reg.scope)
+
+	}
 })
